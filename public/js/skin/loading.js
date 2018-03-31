@@ -1,1 +1,0 @@
-$('p, span').css('background', 'white');

@@ -366,3 +366,6 @@ body{font-family: 微软雅黑}
     padding: 15px 20px;
     background: white;
 }
+.show_article>div p, .show_article>div span {
+    background: white !important;
+}

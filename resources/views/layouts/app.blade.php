@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'ZeroPoint') }}</title>
-    <link rel="icon" href="images/favico.ico">
+    <link rel="icon" href="/images/favico.ico">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('Font-Awesome-3.2.1/css/font-awesome.css') }}" rel="stylesheet">
