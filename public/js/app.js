@@ -48679,7 +48679,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             };
             this.$axios(url).then(function (data) {
-                console.log(data.data);
                 if (data.data === 404) {
                     window.location.href = '/error';
                 } else {
