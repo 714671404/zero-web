@@ -47305,16 +47305,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             timer: null, //定时器
             mark: 0, //比对图片索引的变量
             imgArray: [{
-                img: 'images/index/recommend/google_logo.png',
+                img: '/images/index/recommend/google_logo.png',
                 href: 'https://www.google.com'
             }, {
-                img: 'images/index/recommend/laravel.png',
+                img: '/images/index/recommend/laravel.png',
                 href: 'https://laravel-china.org/docs/laravel/5.6'
             }, {
-                img: 'images/index/recommend/laravel_book.png',
+                img: '/images/index/recommend/laravel_book.png',
                 href: 'https://laravel-china.org/courses'
             }, {
-                img: 'images/index/recommend/php_logo.png',
+                img: '/images/index/recommend/php_logo.png',
                 href: 'http://php.net/manual/zh/index.php'
             }]
         };
@@ -47544,11 +47544,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     size: this.pageSize
                 }
             }).then(function (lists) {
-                console.log(lists);
                 _this.lists = lists.data.data;
                 _this.recordCount = Math.ceil(lists.data.count / _this.pageSize);
-            }).catch(function (error) {
-                console.log(error);
             });
         }
     }
@@ -48400,7 +48397,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
-        return {};
+        return {
+            user: {}
+        };
     },
 
     computed: {},
@@ -48448,6 +48447,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     }
                 };
                 this.get_data(get_register);
+                if (this.user.code == 200) {
+
+                    window.location.href = '/';
+                }
             }
         },
         if_show: function if_show(el) {
@@ -48463,8 +48466,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         get_data: function get_data(accept_object) {
+            var _this = this;
+
             this.$axios(accept_object).then(function (data) {
-                console.log(data);
+                _this.user = data.data;
             });
         }
     },

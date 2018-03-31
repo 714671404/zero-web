@@ -49,13 +49,10 @@
                     }
                 })
                     .then(lists => {
-                        console.log(lists);
                         this.lists = lists.data.data
                         this.recordCount = Math.ceil(lists.data.count / this.pageSize)
                     })
-                    .catch(error => {
-                        console.log(error)
-                    })
+
             }
         }
     }

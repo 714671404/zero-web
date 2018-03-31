@@ -11,6 +11,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('Font-Awesome-3.2.1/css/font-awesome.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/skin/loading.js') }}" defer></script>
     <script src="{{ asset('js/public/footer.js') }}" defer></script>
     <script src="{{ asset('js/skin/link.js') }}" defer></script>
     <script>window.Laravel=<?php echo json_encode(['csrfToken'=>csrf_token()])?></script>

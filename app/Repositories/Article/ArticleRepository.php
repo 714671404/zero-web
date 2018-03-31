@@ -30,4 +30,13 @@ class ArticleRepository
         $lists['count'] = $this->article->count();
         return $lists;
     }
+
+    public function find($id)
+    {
+        $article = $this->article::find($id);
+        if (empty($article)) {
+            return 404;
+        }
+        return $article;
+    }
 }

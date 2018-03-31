@@ -27,7 +27,7 @@
     export default {
         data () {
             return {
-
+                user: {}
             }
         },
         computed: {
@@ -77,6 +77,10 @@
                         }
                     }
                     this.get_data(get_register)
+                    if (this.user.code == 200) {
+
+                        window.location.href='/';
+                    }
                 }
             },
             if_show (el) {
@@ -90,7 +94,7 @@
             get_data (accept_object) {
                 this.$axios(accept_object)
                     .then(data => {
-                        console.log(data)
+                        this.user = data.data
                     })
             }
         },

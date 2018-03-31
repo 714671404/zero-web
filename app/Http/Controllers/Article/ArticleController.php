@@ -15,8 +15,17 @@ class ArticleController extends Controller
         $this->articleRepository = $articleRepository;
     }
 
-    public function show(Request $request)
+    public function apiShow(Request $request)
     {
         return $this->articleRepository->get_list(['id'=>$request->id, 'size'=>$request->size]);
+    }
+
+    public function show(Request $request)
+    {
+        $article = $this->articleRepository->find($request->id);
+        if ($article === 404) {
+            return view('error.error');
+        }
+        return view('articles.show', compact('article'));
     }
 }

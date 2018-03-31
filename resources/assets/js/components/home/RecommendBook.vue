@@ -23,19 +23,19 @@
                 mark: 0, //比对图片索引的变量
                 imgArray: [
                     {
-                        img: 'images/index/recommend/google_logo.png',
+                        img: '/images/index/recommend/google_logo.png',
                         href: 'https://www.google.com'
                     },
                     {
-                        img: 'images/index/recommend/laravel.png',
+                        img: '/images/index/recommend/laravel.png',
                         href: 'https://laravel-china.org/docs/laravel/5.6'
                     },
                     {
-                        img: 'images/index/recommend/laravel_book.png',
+                        img: '/images/index/recommend/laravel_book.png',
                         href: 'https://laravel-china.org/courses'
                     },
                     {
-                        img: 'images/index/recommend/php_logo.png',
+                        img: '/images/index/recommend/php_logo.png',
                         href: 'http://php.net/manual/zh/index.php'
                     }
                 ]

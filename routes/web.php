@@ -15,9 +15,4 @@ Route::get('/', 'Home\HomeController@index');
 
 Route::get('/login', 'User\LoginController@showLoginFrom');
 Route::get('/register', 'User\RegisterController@showRegisteionForm');
-
-Route::get('/ceshi', function () {
-
-    return view('auth.ceshi');
-});
-Route::post('/registers', 'User\RegisterController@register');
+Route::get('/article/{id}', 'Article\ArticleController@show');

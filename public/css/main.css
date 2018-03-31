@@ -351,3 +351,18 @@ body{font-family: 微软雅黑}
     bottom:50px;
     background:url(/images/backtop2013.png) no-repeat -70px 0px;
 }
+.show_article>h1 {
+    font-size: 22px;
+    color: #333;
+    text-align: left;
+    line-height: 135%;
+    margin-bottom: 12px;
+    font-weight: normal;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #fff;
+    padding: 15px 25px;
+}
+.show_article>div {
+    padding: 15px 20px;
+    background: white;
+}
