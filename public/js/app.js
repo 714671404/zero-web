@@ -48679,14 +48679,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             };
             this.$axios(url).then(function (data) {
-                var d = data.data.data;
-                _this.title = d.title;
-                _this.content = d.content;
-                console.log(_this.title);
+                console.log(data.data);
+                if (data.data === 404) {
+                    window.location.href = '/error';
+                } else {
+                    var d = data.data.data;
+                    _this.title = d.title;
+                    _this.content = d.content;
+                }
             });
         }
     },
-    mounted: function mounted() {
+    created: function created() {
         this.getList();
     }
 });

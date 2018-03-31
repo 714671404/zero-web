@@ -24,7 +24,7 @@ class ArticleController extends Controller
     {
         $article = $this->articleRepository->find($request->id);
         if ($article === 404) {
-            return self::failed(404);
+            return self::failed('当前页面不存在', 404);
         }
         return self::success($article);
     }

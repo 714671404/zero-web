@@ -28,14 +28,19 @@
                 }
                 this.$axios(url)
                     .then(data => {
-                        let d = data.data.data
-                        this.title = d.title
-                        this.content = d.content
-                        console.log(this.title)
+                        console.log(data.data)
+                        if (data.data === 404) {
+                            window.location.href='/error'
+                        } else {
+                            let d = data.data.data
+                            this.title = d.title
+                            this.content = d.content
+                        }
+
                     })
             }
         },
-        mounted () {
+        created () {
             this.getList()
         }
     }
