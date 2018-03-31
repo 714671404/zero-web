@@ -17,3 +17,4 @@ Route::post('/login', 'User\LoginController@login');
 Route::post('/register', 'User\RegisterController@register');
 
 Route::get('/article', 'Article\ArticleController@apiShow');
+Route::get('/article/list', 'Article\ArticleController@apiShowFind');

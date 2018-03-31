@@ -17,15 +17,15 @@ class ArticleController extends Controller
 
     public function apiShow(Request $request)
     {
-        return $this->articleRepository->get_list(['id'=>$request->id, 'size'=>$request->size]);
+        return $this->articleRepository->get_list(['id'=>$request->get('id'), 'size'=>$request->get('size')]);
     }
 
-    public function show(Request $request)
+    public function apiShowFind(Request $request)
     {
         $article = $this->articleRepository->find($request->id);
         if ($article === 404) {
-            return view('error.error');
+            return self::failed(404);
         }
-        return view('articles.show', compact('article'));
+        return self::success($article);
     }
 }

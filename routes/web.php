@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/', 'Home\HomeController@index');
-
-Route::get('/login', 'User\LoginController@showLoginFrom');
-Route::get('/register', 'User\RegisterController@showRegisteionForm');
-Route::get('/article/{id}', 'Article\ArticleController@show');
+Route::get('/', function () {return view('index');});
+Route::get('/login', function () {return view('auth.login');});
+Route::get('/register', function () {return view('auth.register');});
+Route::get('/article/{id}', function () {return view('articles.show');});

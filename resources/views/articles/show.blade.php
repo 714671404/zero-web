@@ -4,10 +4,7 @@
     <div class="application">
         <div class="application_inner">
             <div class="application_inner_left">
-                <div class="show_article app_bg">
-                    <h1>{{ $article->title }}</h1>
-                    <div>{!! $article->content !!}</div>
-                </div>
+                <show-find></show-find>
             </div>
             <div class="application_inner_right">
                 <div class="app_lication_inner_right_recommend app_bg">

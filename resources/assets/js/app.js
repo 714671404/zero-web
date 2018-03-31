@@ -19,6 +19,7 @@ import RecommendBook from './components/home/RecommendBook'
 import ContentList from './components/home/ContentList'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+import ShowFind from './components/article/ShowFind'
 
 const app = new Vue({
     el: '#app',
@@ -26,6 +27,7 @@ const app = new Vue({
         RecommendBook,
         ContentList,
         Login,
-        Register
+        Register,
+        ShowFind
     }
 });
