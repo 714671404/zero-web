@@ -12,7 +12,7 @@
         <div class="app_select">
             <div class="app_select_inner">
                 <input type="text">
-                <span><i class="icon-search"></i></span>
+                <span onclick="alert('功能尚未完善，敬请期待。')"><i class="icon-search"></i></span>
             </div>
         </div>
         <div class="app_login">
